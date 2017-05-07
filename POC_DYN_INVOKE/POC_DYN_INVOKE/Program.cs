@@ -10,9 +10,9 @@ namespace POC_DYN_INVOKE
 {
     public class BindingDllClass
     {
-        [DllImport(@"C:\Projects\Epson\POC_C++_C#\POCDLL\Debug\POCDLL.dll")]
-        public static extern double Calc(double a, double b);
-        [System.Runtime.InteropServices.DllImport(@"C:\Projects\Epson\POC_C++_C#\POCDLL\Debug\POCDLL.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport(@"C:\Projects\POC_IMPORT_C_C#\POCDLL\Debug\POCDLL.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern double Sum(double a, double b);
+        [DllImport(@"C:\Projects\POC_IMPORT_C_C#\POCDLL\Debug\POCDLL.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern double Subtract(double a, double b);
     }
 
@@ -23,8 +23,10 @@ namespace POC_DYN_INVOKE
             double a = 2;
             double b = 1;
             double c = BindingDllClass.Subtract(a, b);
+            double d = BindingDllClass.Sum(a, b);
 
             Trace.WriteLine(string.Format("{0} - {1} = {2}", a, b, c));
+            Trace.WriteLine(string.Format("{0} + {1} = {2}", a, b, d));
         }
     }
 }

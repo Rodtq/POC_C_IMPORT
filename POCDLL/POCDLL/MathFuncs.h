@@ -2,7 +2,7 @@
 namespace MathFuncs
 {
 	// Returns a + b
-	extern "C" __declspec(dllexport) double Calc(double a, double b);
+	extern "C" __declspec(dllexport) double Sum(double a, double b);
 
 	// Returns a - b
 	extern "C" __declspec(dllexport) double Subtract(double a, double b);

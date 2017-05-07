@@ -10,7 +10,7 @@ using namespace std;
 
 namespace MathFuncs
 {
-	double Calc(double a, double b)
+	double Sum(double a, double b)
 	{
 		return a + b;
 	}
